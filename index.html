@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chain-of-Focus: Adaptive Visual Search and Zooming for Multimodal Reasoning via RL</title>
+    <title>STVG-R1: Incentivizing Instance-Level Reasoning and Grounding in Videos via Reinforcement Learning</title>
 
     <!-- 添加favicon -->
     <!-- <link rel="icon" type="image/x-icon" href="assets/images/icon.png"> -->
@@ -104,7 +104,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column has-text-centered">
-                    <h1 class="title is-2 publication-title">Chain-of-Focus: Adaptive Visual Search and Zooming for Multimodal Reasoning via RL</h1>
+                    <h1 class="title is-2 publication-title">STVG-R1: Incentivizing Instance-Level Reasoning and Grounding in Videos via Reinforcement Learning</h1>
                     <!-- <h1 class="title is-2 custom-heading">Chain-of-Focus: Adaptive Visual Search and Zooming for Multimodal Reasoning via RL</h1> -->
                     <div class="is-size-5 publication-authors">
                         <span class="author-block">
@@ -217,7 +217,7 @@
           <!-- <img src="assets/images/teaser.jpg" class="interpolation-image"
                alt="" style="display: block; margin-left: auto; margin-right: auto" width="900"/> -->
           <p style="font-size: 125%">
-            Vision language models (VLMs) have achieved impressive performance across a variety of computer vision tasks. However, the multimodal reasoning capability has not been fully explored in existing models. In this paper, we propose a Chain-of-Focus (CoF) method that allows VLMs to perform adaptive focusing and zooming in on key image regions based on obtained visual cues and the given questions, achieving efficient multimodal reasoning. To enable this CoF capability, we present a two-stage training pipeline, including supervised fine-tuning (SFT) and reinforcement learning (RL). In the SFT stage, we construct the MM-CoF dataset, comprising 3K samples derived from a visual agent designed to adaptively identify key regions to solve visual tasks with different image resolutions and questions. We use MM-CoF to fine-tune the Qwen2.5-VL model for cold start. In the RL stage, we leverage the outcome accuracies and formats as rewards to update the Qwen2.5-VL model, enabling further refining the model's search and reasoning strategy without human priors. Our model achieves significant improvements on multiple benchmarks. On the V* benchmark that requires strong visual reasoning capability, our model outperforms existing VLMs by 5% among 8 image different resolutions ranging from 224 to 4K, demonstrating the effectiveness of the proposed CoF method and facilitating the more efficient deployment of VLMs in practical applications.
+            In vision–language models (VLMs), misalignment between textual descriptions and visual coordinates often induces hallucinations. This issue becomes particularly severe in dense prediction tasks such as spatial–temporal video grounding (STVG). Prior approaches typically focus on enhancing visual–textual alignment or attaching auxiliary decoders. However, these strategies inevitably introduce additional trainable modules, leading to significant annotation costs and computational overhead. In this work, we propose a novel visual prompting paradigm that avoids the difficult problem of aligning coordinates across modalities. Specifically, we reformulate per-frame coordinate prediction as a compact instance-level identification problem by assigning each object a unique, temporally consistent ID. These IDs are embedded into the video as visual prompts, providing explicit and interpretable inputs to the VLMs. Furthermore, we introduce STVG-R1, the first reinforcement learning framework for STVG, which employs a task-driven reward to jointly optimize temporal accuracy, spatial consistency, and structural format regularization. Extensive experiments on six benchmarks demonstrate the effectiveness of our approach. STVG-R1 surpasses the baseline Qwen2.5-VL-7B by a remarkable margin of 20.9% on m_IoU on the HCSTVG-v2 benchmark, establishing a new state of the art (SOTA). Surprisingly, STVG-R1 also exhibits strong zero-shot generalization to multi-object referring video object segmentation task, achieving a SOTA 47.3% J&F on MeViS. 
           </p>
         </div>
       </div>
