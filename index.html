@@ -105,46 +105,27 @@
             <div class="columns is-centered">
                 <div class="column has-text-centered">
                     <h1 class="title is-2 publication-title">STVG-R1: Incentivizing Instance-Level Reasoning and Grounding in Videos via Reinforcement Learning</h1>
-                    <!-- <h1 class="title is-2 custom-heading">Chain-of-Focus: Adaptive Visual Search and Zooming for Multimodal Reasoning via RL</h1> -->
+                    <!-- <h1 class="title is-2 custom-heading">STVG-R1: Incentivizing Instance-Level Reasoning and Grounding in Videos via Reinforcement Learning</h1> -->
                     <div class="is-size-5 publication-authors">
                         <span class="author-block">
-                          <a target="_blank" href="https://github.com/xtong-zhang">Xintong Zhang</a><sup>1,2*</sup>,
+                          <a target="_blank" href="https://xiaowzhang00.github.io/">Xiaowen Zhang</a><sup>1,2</sup>,
                         </span>
                         <span class="author-block">
                           <a target="_blank" href="https://zhigao2017.github.io/">Zhi Gao</a><sup>2,3*</sup>,
                         </span>
                         <span class="author-block">
-                          <a target="_blank" href="https://bofei5675.github.io/">Bofei Zhang</a><sup>2</sup>,
+                          <a target="_blank" href="https://xiaowzhang00.github.io/">Licheng Jiao</a><sup>1†</sup>,
                         </span>
                         <span class="author-block">
-                          <a target="_blank" href="https://pengxiang-li.github.io/">Pengxiang Li</a><sup>1,2</sup>,
-                        </span>
-                        <span class="author-block">
-                          <a target="_blank" href="https://adatwi.github.io/">Xiaowen Zhang</a><sup>2</sup>,
-                        </span>
-                        <span class="author-block">
-                          <a target="_blank" href="https://adatwi.github.io/">Yang Liu</a><sup>2</sup>,
-                        </span>
-                        <span class="author-block">
-                          <a target="_blank" href="https://adatwi.github.io/">Tao Yuan</a><sup>2</sup>
-                        </span>
-                        <span class="author-block">
-                          <a target="_blank" href="https://wu-yuwei-bit.github.io/">Yuwei Wu</a><sup>1,4†</sup>
-                        </span>
-                        <span class="author-block">
-                          <a target="_blank" href="https://scholar.google.com/citations?user=Sl6TV7gAAAAJ&hl=en">Yunde Jia</a><sup>4</sup>
-                        </span>
-                        <span class="author-block">
-                          <a target="_blank" href="https://www.zhusongchun.net/">Song-Chun Zhu</a><sup>2,3,5</sup>
+                          <a target="_blank" href="https://xiaowzhang00.github.io/">Lingling Li</a><sup>1</sup>,
                         </span>
                         <span class="author-block">
                           <a target="_blank" href="https://liqing.io/">Qing Li</a><sup>2†</sup>
                         </span>
 
-
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Beijing Key Laboratory of Intelligent Information Technology, School of Computer Science & Technology, Beijing Institute of Technology, <sup>2</sup>State Key Laboratory of General Artificial Intelligence, BIGAI, <sup>3</sup>School of Intelligence Science and Technology, Peking University, <sup>4</sup>Guangdong Laboratory of Machine Perception and Intelligent Computing, Shenzhen MSU-BIT University, <sup>5</sup>Department of Automation, Tsinghua University</span>
+            <span class="author-block"><sup>1</sup>Xidian University, <sup>2</sup>State Key Laboratory of General Artificial Intelligence, BIGAI, <sup>3</sup>Beijing Institute of Technology, </span>
           </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>*</sup>Equal contribution, <sup>†</sup>Corresponding authors</span>
@@ -214,7 +195,7 @@
       <div class="column">
         <h2 class="title is-3 custom-heading">Abstract</h2>
         <div class="content has-text-justified">
-          <!-- <img src="assets/images/teaser.jpg" class="interpolation-image"
+          <!-- <img src="assets/fig1.pdf" class="interpolation-image"
                alt="" style="display: block; margin-left: auto; margin-right: auto" width="900"/> -->
           <p style="font-size: 125%">
             In vision–language models (VLMs), misalignment between textual descriptions and visual coordinates often induces hallucinations. This issue becomes particularly severe in dense prediction tasks such as spatial–temporal video grounding (STVG). Prior approaches typically focus on enhancing visual–textual alignment or attaching auxiliary decoders. However, these strategies inevitably introduce additional trainable modules, leading to significant annotation costs and computational overhead. In this work, we propose a novel visual prompting paradigm that avoids the difficult problem of aligning coordinates across modalities. Specifically, we reformulate per-frame coordinate prediction as a compact instance-level identification problem by assigning each object a unique, temporally consistent ID. These IDs are embedded into the video as visual prompts, providing explicit and interpretable inputs to the VLMs. Furthermore, we introduce STVG-R1, the first reinforcement learning framework for STVG, which employs a task-driven reward to jointly optimize temporal accuracy, spatial consistency, and structural format regularization. Extensive experiments on six benchmarks demonstrate the effectiveness of our approach. STVG-R1 surpasses the baseline Qwen2.5-VL-7B by a remarkable margin of 20.9% on m_IoU on the HCSTVG-v2 benchmark, establishing a new state of the art (SOTA). Surprisingly, STVG-R1 also exhibits strong zero-shot generalization to multi-object referring video object segmentation task, achieving a SOTA 47.3% J&F on MeViS. 
