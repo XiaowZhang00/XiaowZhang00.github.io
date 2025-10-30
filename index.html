@@ -219,29 +219,19 @@
         <h2 class="title is-3 section-title" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);">Method</h2>
         <hr class="section-line">
 
+
+
+
+
           
         <div class="content has-text-justified">
           <img src="assets/method.jpg" class="interpolation-image"
                alt="" style="display: block; margin-left: auto; margin-right: auto" width="900"/>
                <div class="content has-text-justified">
                 <div class="content has-text-justified hover-card" style="padding: 1.5rem;">
-                  <p>An illustration of our proposed <strong>STVG-R1</strong> framework. Each object is assigned a unique ID via visual prompts, and the policy model is trained with spatial, temporal, and template rewards.</p>
-                  <ol>
-                    <li>When the given image is <strong>high-resolution</strong> and uses a large number of visual tokens, or when the question depends on a large region of the image, the extracted visual tokens are often sufficient to answer the question directly. 
-                    <li>When the image is <strong>low-resolution</strong> with fewer visual tokens, or when the question demands details from small regions of the image, the visual tokens may not provide enough cues. In this case, the model should search for and zoom in on key image regions to extract more visual cues. 
-                  </ol>
-                  <p>In implementation, the visual tokens corresponding to key regions are appended to previously generated output tokens for subsequent outputs during a single generation round. This approach allows the VLMs to gather more visual cues, enabling them to analyze the image more thoroughly, accurately, and reliably than if they only relied on a static view of the image. </p>
-                    
-                  <p><span style="color:#6a7bff; font-weight:bold;">Note </span> that our method does not perform visual search and zooming for every image, but performs adaptive search and zooming based on obtained visual cues, reducing the cost while keeping the performance.</p>
-                </div>
-          <img src="assets/images/agent.jpg" class="interpolation-image"
-            alt="" style="display: block; margin-left: auto; margin-right: auto" width="900"/>
-            <div class="content has-text-justified">
-              <div class="content has-text-justified hover-card" style="padding: 1.5rem;">
-                <p>CoF adopts a two-stage training pipeline.</p>
-                <p><span style="color:#6a7bff; font-weight:bold;">In the SFT stage</span>, we construct the MM-CoF dataset with 3K samples from the SAM dataset across diverse resolutions. For each image, we synthesize a task and use a visual agent with multiple tools to search and reason until task completion. The agent's reasoning steps are then summarized into a CoF process by an LLM. We fine-tune a Qwen2.5-VL-7B model on MM-CoF for cold start.</p>
-                <p><span style="color:#ff6b6b; font-weight:bold;">In the RL stage</span>, we leverage the outcome accuracies and formats as rewards to update the VLMs, enabling further refining the model’s search and reasoning strategy without human priors. We denote the obtained model as Qwen2.5-VL-7B-CoF.</p>
-                </div>
+                  An illustration of our proposed <strong>STVG-R1</strong> framework. Each object is assigned a unique ID via visual prompts, and the policy model is trained with spatial, temporal, and template rewards.</p>
+                  <p><strong>1. Object-Centric Visual Prompting.</strong> Each object in the video is assigned a unique, temporally consistent ID rendered as a small visual marker. These IDs transform dense coordinate prediction into a compact instance-level identification task, mitigating visual–textual misalignment and enabling interpretable grounding. 
+                  <p><strong>2. Reinforcement Learning with Structured Rewards.</strong> The model is optimized under a task-driven reward combining temporal accuracy, spatial consistency, and format regularity. This unified framework enhances reasoning coherence and yields state-of-the-art performance across six video grounding benchmarks. 
         </div>
       </div>
     </div>
