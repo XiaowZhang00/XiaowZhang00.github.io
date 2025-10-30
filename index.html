@@ -195,7 +195,7 @@
       <div class="column">
         <h2 class="title is-3 custom-heading">Abstract</h2>
         <div class="content has-text-justified">
-          <!-- <img src="assets/fig1.pdf" class="interpolation-image"
+          <!-- <img src="assets/fig1.jpg" class="interpolation-image"
                alt="" style="display: block; margin-left: auto; margin-right: auto" width="900"/> -->
           <p style="font-size: 125%">
             In vision–language models (VLMs), misalignment between textual descriptions and visual coordinates often induces hallucinations. This issue becomes particularly severe in dense prediction tasks such as spatial–temporal video grounding (STVG). Prior approaches typically focus on enhancing visual–textual alignment or attaching auxiliary decoders. However, these strategies inevitably introduce additional trainable modules, leading to significant annotation costs and computational overhead. In this work, we propose a novel visual prompting paradigm that avoids the difficult problem of aligning coordinates across modalities. Specifically, we reformulate per-frame coordinate prediction as a compact instance-level identification problem by assigning each object a unique, temporally consistent ID. These IDs are embedded into the video as visual prompts, providing explicit and interpretable inputs to the VLMs. Furthermore, we introduce STVG-R1, the first reinforcement learning framework for STVG, which employs a task-driven reward to jointly optimize temporal accuracy, spatial consistency, and structural format regularization. Extensive experiments on six benchmarks demonstrate the effectiveness of our approach. STVG-R1 surpasses the baseline Qwen2.5-VL-7B by a remarkable margin of 20.9% on m_IoU on the HCSTVG-v2 benchmark, establishing a new state of the art (SOTA). Surprisingly, STVG-R1 also exhibits strong zero-shot generalization to multi-object referring video object segmentation task, achieving a SOTA 47.3% J&F on MeViS. 
@@ -218,12 +218,13 @@
         <h2 class="title is-3 section-title" style="text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);">Method</h2>
         <hr class="section-line">
 
+          
         <div class="content has-text-justified">
-          <img src="assets/images/model_inference.jpg" class="interpolation-image"
+          <img src="assets/method.jpg" class="interpolation-image"
                alt="" style="display: block; margin-left: auto; margin-right: auto" width="900"/>
                <div class="content has-text-justified">
                 <div class="content has-text-justified hover-card" style="padding: 1.5rem;">
-                  <p>The <strong>Chain-of-Focus (CoF)</strong> method enables VLMs to perform adaptive search and zooming in on key image regions, thereby creating a chain of focus steps for multimodal reasoning with gradually obtained visual cues.</p>
+                  <p>An illustration of our proposed <strong>STVG-R1</strong> framework. Each object is assigned a unique ID via visual prompts, and the policy model is trained with spatial, temporal, and template rewards.</p>
                   <ol>
                     <li>When the given image is <strong>high-resolution</strong> and uses a large number of visual tokens, or when the question depends on a large region of the image, the extracted visual tokens are often sufficient to answer the question directly. 
                     <li>When the image is <strong>low-resolution</strong> with fewer visual tokens, or when the question demands details from small regions of the image, the visual tokens may not provide enough cues. In this case, the model should search for and zoom in on key image regions to extract more visual cues. 
