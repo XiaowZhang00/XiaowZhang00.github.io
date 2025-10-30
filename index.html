@@ -250,14 +250,15 @@
             <p>The results show that our method consistently surpasses both task-specific dense prediction models and general-purpose vision–language models (VLMs), validating the effectiveness of our object-centric visual prompting paradigm and reinforcement learning framework.
             <img src="assets/table1.jpg" class="interpolation-image"
                alt="" style="display: block; margin-left: auto; margin-right: auto" width="900"/>
-                
-          <img src="assets/method.jpg" class="interpolation-image"
+            <p><strong>STVG Results.</strong>STVG-R1 achieves new state-of-the-art (SOTA) results on HCSTVG-v1, HCSTVG-v2, and ST-Align, improving the baseline Qwen2.5-VL-7B by up to +20.9% m_vIoU on HCSTVG-v2. Compared with the strongest SFT-based model SpaceVLLM, our method achieves gains of +4.0%, +6.2%, +10.9%, and +14.1% across four metrics.
+            <img src="assets/table2.jpg" class="interpolation-image"
                alt="" style="display: block; margin-left: auto; margin-right: auto" width="900"/>
-               <div class="content has-text-justified">
-                <div class="content has-text-justified hover-card" style="padding: 1.5rem;">
-                  An illustration of our proposed <strong>STVG-R1</strong> framework. Each object is assigned a unique ID via visual prompts, and the policy model is trained with spatial, temporal, and template rewards.</p>
-                  <p><strong>1. Object-Centric Visual Prompting.</strong> Each object in the video is assigned a unique, temporally consistent ID rendered as a small visual marker. These IDs transform dense coordinate prediction into a compact instance-level identification task, mitigating visual–textual misalignment and enabling interpretable grounding. 
-                  <p><strong>2. Reinforcement Learning with Structured Rewards.</strong> The model is optimized under a task-driven reward combining temporal accuracy, spatial consistency, and format regularity. This unified framework enhances reasoning coherence and yields state-of-the-art performance across six video grounding benchmarks. 
+            <img src="assets/table3.jpg" class="interpolation-image"
+               alt="" style="display: block; margin-left: auto; margin-right: auto" width="900"/>
+            <p><strong>SVG and RVOS Results.</strong>On ST-Align’s spatial evaluation, STVG-R1 attains m_vIoU 48.6%, exceeding LLaVA-ST by +13.1%. In the more challenging MeViS benchmark, STVG-R1 reaches a J&F of 47.3%, showing strong zero-shot generalization to multi-object segmentation tasks, despite being trained only on single-object grounding data.
+            <img src="assets/table4.jpg" class="interpolation-image"
+               alt="" style="display: block; margin-left: auto; margin-right: auto" width="900"/>
+            <p><strong>VTG Results.</strong>For out-of-distribution temporal grounding, STVG-R1 achieves tIoU@0.5 = 52.5% on Charades-STA (zero-shot) and competitive tIoU@0.3 = 42.5% on TVGBench, demonstrating robust temporal reasoning ability.
         </div>
       </div>
     </div>
