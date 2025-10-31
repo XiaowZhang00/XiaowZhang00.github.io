@@ -304,46 +304,44 @@
 
         <!-- case 1 -->
         <div class="columns is-vcentered">
-          
-          <!-- img -->
+        
+          <!-- video -->
           <div class="column is-6">
-              <figure class="image">
-                <video
-                  src="4_tt0t_a1EDCE_0_bbox_visualization.mp4"
-                  controls
-                  playsinline
-                  preload="metadata"
-                  style="width:100%; border-radius:8px; box-shadow:0 0 16px rgba(0,0,0,0.1);">
-                  您的浏览器不支持 HTML5 视频。
-                </video>
-              </figure>
-            </div>
+            <figure class="image">
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="assets/images/case1_poster.jpg"
+                style="width:100%; aspect-ratio:16/9; border-radius:8px; box-shadow:0 0 16px rgba(0,0,0,0.1); object-fit:cover;">
+                <source src="assets/videos/4_tt0t_a1EDCE_0_bbox_visualization.mp4" type="video/mp4" />
+                <source src="assets/videos/4_tt0t_a1EDCE_0_bbox_visualization.webm" type="video/webm" />
+                您的浏览器不支持 HTML5 视频。
+              </video>
+            </figure>
           </div>
-
-
+        
           <!-- text -->
           <div class="column is-6 has-text-left reasoning-block">
             <p>
               <strong>STVG: When and where?</strong>
               <strong>Description:</strong> The boy to the left of the woman stands up and turns. <br>
             </p>
-          
+        
             <p><strong>Output:</strong></p>
-          
+        
             <p class="justified-output">
               <span class="tag-label">&lt;think&gt;</span>
               To determine the event "The boy to the left of the woman stands up and turns," I need to identify the boy who is positioned to the left of the woman. In this scene, the boy wearing a striped shirt is seated next to the woman. As the video progresses, this boy stands up and begins to turn his body away from the table. The action happens around the 15-second mark.
               <span class="tag-label">&lt;/think&gt;</span>
             </p>
-          
+        
             <p><span class="tag-label">&lt;answer&gt;</span> B <span class="tag-label">&lt;/answer&gt;</span></p>
           </div>
-
+        
         </div>
-
-
-
-
 
 
         <!-- case 2 -->
