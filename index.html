@@ -308,26 +308,23 @@
           <!-- video -->
           <div class="column is-6">
             <figure class="image">
-              <video
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="metadata"
-                poster="assets/poster1.jpg"
-                style="width:100%; aspect-ratio:16/9; border-radius:8px; box-shadow:0 0 16px rgba(0,0,0,0.1); object-fit:cover;">
-                <source src="assets/4_tt0t_a1EDCE_0_bbox_visualization.mp4" type="video/mp4" />
-                <source src="assets/4_tt0t_a1EDCE_0_bbox_visualization.webm" type="video/webm" />
-                您的浏览器不支持 HTML5 视频。
-              </video>
+                <video
+                  controls
+                  playsinline
+                  preload="auto"
+                  poster="assets/poster1.jpg"   <!-- 用已确定存在的图片 -->
+                  style="display:block;width:100%;height:auto;border-radius:8px;box-shadow:0 0 16px rgba(0,0,0,0.1);background:#000;">
+                  <source src="assets/4_tt0t_a1EDCE_0_bbox_visualization.mp4" type="video/mp4" />
+                </video>
             </figure>
           </div>
+
         
           <!-- text -->
           <div class="column is-6 has-text-left reasoning-block">
             <p>
               <strong>STVG: When and where?</strong> <br>
-              <strong>Description:</strong> The boy to the left of the woman stands up and turns. <br>
+              <strong>Description:</strong> The boy to the left of the woman stands up and turns. 111 <br>
             </p>
         
             <p><strong>Output:</strong></p>
