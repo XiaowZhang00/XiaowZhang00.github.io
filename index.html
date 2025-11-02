@@ -417,6 +417,48 @@
           </div>
         </div>
 
+        <!-- case 4 -->
+        <div class="mb-5">
+          <!-- 下面两列：左视频，右文字 -->
+          <div class="columns is-vcentered">
+            <!-- 左列：视频 -->
+            <div class="column is-6">
+              <figure class="image">
+                <video
+                  id="demo"
+                  controls
+                  autoplay
+                  muted
+                  playsinline
+                  preload="auto"
+                  loop
+                  style="width:100%;height:auto;">
+                  <source src="assets/stvg_demo_v6.mp4?v=1" type="video/mp4" />
+                </video>
+              </figure>
+            </div>
+        
+            <!-- 右列：文字 -->
+            <div class="column is-6 has-text-left reasoning-block">
+              <p><strong>Description:</strong> The man in red clothes says a few words to the man in a white shirt and walks to the man without a hat.</p>
+              <p><strong>Output:</strong></p>
+              <p class="justified-output">
+                <span class="tag-label">&lt;think&gt;</span>
+                To determine the event "The man in red clothes says a few words to the man in a white shirt and walks to the man without a hat," I need to identify the individuals involved and analyze their actions. </p>
+                1. The man in red clothes is labeled as Object ID 5. 2. The man in a white shirt is labeled as Object ID 1. 3. The man without a hat is labeled as Object ID 3. </p>
+                The sequence of events can be observed as follows:
+                - Object ID 5 approaches Object ID 1.
+                - Object ID 5 appears to be speaking to Object ID 1.
+                - Object ID 5 then moves towards Object ID 3. </p>
+                
+                Based on this observation, the event occurs between approximately 6.90 and 14.90 seconds.
+                <span class="tag-label">&lt;/think&gt;</span>
+              </p>
+              <p><span class="tag-label">&lt;answer&gt;</span> Target ID: 5, Time range: 6.90 to 14.90 <span class="tag-label">&lt;/answer&gt;</span></p>
+            </div>
+          </div>
+        </div>
+
 
         <!-- case 3 -->
         <div class="columns is-vcentered">
