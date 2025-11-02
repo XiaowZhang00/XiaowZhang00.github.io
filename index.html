@@ -417,90 +417,6 @@
           </div>
         </div>
 
-        <!-- case 4 -->
-        <div class="mb-5">
-          <!-- 下面两列：左视频，右文字 -->
-          <div class="columns is-vcentered">
-            <!-- 左列：视频 -->
-            <div class="column is-6">
-              <figure class="image">
-                <video
-                  id="demo"
-                  controls
-                  autoplay
-                  muted
-                  playsinline
-                  preload="auto"
-                  loop
-                  style="width:100%;height:auto;">
-                  <source src="assets/stvg_demo5_v1.mp4" type="video/mp4" />
-                </video>
-              </figure>
-            </div>
-        
-            <!-- 右列：文字 -->
-            <div class="column is-6 has-text-left reasoning-block">
-              <p><strong>Description:</strong> Man in military uniform walks to the stool and sits down</p>
-              <p><strong>Output:</strong></p>
-              <p class="justified-output">
-                <span class="tag-label">&lt;think&gt;</span>
-                The man in military uniform (Object ID 1) walks towards the stool and sits down. This action happens between 3.00 and 10.00 seconds.
-                <span class="tag-label">&lt;/think&gt;</span>
-              </p>
-              <p><span class="tag-label">&lt;answer&gt;</span> Target ID: 1, Time range: 3.00 to 12.00 <span class="tag-label">&lt;/answer&gt;</span></p>
-            </div>
-          </div>
-        </div>
-
-        <!-- case 2 -->
-        <div class="columns is-vcentered">
-          
-          <!-- img -->
-          <div class="column is-6">
-            <figure class="image">
-              <!-- <img src="assets/images/case1.jpg" alt="hhh" style="border-radius: 8px; box-shadow: 0 0 16px rgba(0,0,0,0.1);" /> -->
-              <img src="assets/images/case2.jpg" style="border-radius: 8px; box-shadow: 0 0 16px rgba(0,0,0,0.1);" />
-
-            </figure>
-          </div>
-
-
-          <!-- text -->
-          <div class="column is-6 has-text-left reasoning-block">
-            <p>
-              <strong>Query:</strong> What is the color of the woman's jacket?<br>
-              (A) black<br>
-              (B) red<br>
-              (C) blue<br>
-              (D) orange<br>
-              Answer with the option's letter from the given choices directly.
-            </p>
-          
-            <p><strong>Output:</strong></p>
-          
-            <p class="justified-output">
-              <span class="tag-label">&lt;think&gt;</span>
-              To determine the color of the woman's jacket, I need to closely examine the area where she is located. However, the color details are not immediately clear due to the distance and lighting conditions. To improve visibility, I proceed step by step. I first identify the bounding box corresponding to the woman: 
-              <span class="bbox-label">&lt;|box_start|&gt;</span>[570, 1726, 615, 1848]<span class="bbox-label">&lt;|box_end|&gt;</span>. 
-              <!-- <span class="bbox-label">&lt;|box_start|&gt; [570, 1726, 615, 1848] &lt;|box_end|&gt;</span>.  -->
-              I zoom in on this area to obtain a refined visual embedding 
-              <span class="zoomin-label">&lt;|image_zoomin|&gt;</span>, 
-              which reveals that the jacket is light blue. 
-              <span class="tag-label">&lt;/think&gt;</span>
-            </p>
-          
-            <p><span class="tag-label">&lt;answer&gt;</span> C <span class="tag-label">&lt;/answer&gt;</span></p>
-          </div>
-            
-        </div>
-
-
-
-
-
-
-
-
 
         <!-- case 3 -->
         <div class="columns is-vcentered">
@@ -548,10 +464,6 @@
             <p><span class="tag-label">&lt;answer&gt;</span> B <span class="tag-label">&lt;/answer&gt;</span></p>
           </div>
         </div>
-
-
-
-
 
       </div>
     </div>
