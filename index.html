@@ -191,7 +191,7 @@
   <div class="hero-body">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered">
       <div class="column">
         <h2 class="title is-3 custom-heading">Abstract</h2>
         <div class="content has-text-justified">
@@ -300,48 +300,46 @@
     
 
         <!-- case 1 -->
-        <div class="columns is-vcentered">
+        <div class="mb-5">
         
-          <!-- 标题：占满一行 -->
-          <div class="column is-12">
-            <p class="mb-3">
-              <strong class="has-text-danger">When and where?</strong>
-            </p>
+          <!-- 顶部一行标题 -->
+          <p class="has-text-danger mb-3">
+            <strong>When and where?</strong>
+          </p>
+        
+          <!-- 下面两列：左视频，右文字 -->
+          <div class="columns is-vcentered">
+            <!-- 左列：视频 -->
+            <div class="column is-6">
+              <figure class="image">
+                <video
+                  id="demo"
+                  controls
+                  autoplay
+                  muted
+                  playsinline
+                  preload="auto"
+                  loop
+                  style="width:100%;height:auto;">
+                  <source src="assets/stvg_demo_v5.mp4?v=1" type="video/mp4" />
+                </video>
+              </figure>
+            </div>
+        
+            <!-- 右列：文字 -->
+            <div class="column is-6 has-text-left reasoning-block">
+              <p><strong>Description:</strong> The boy to the left of the woman stands up and turns.</p>
+              <p><strong>Output:</strong></p>
+              <p class="justified-output">
+                <span class="tag-label">&lt;think&gt;</span>
+                To determine the event "The boy to the left of the woman stands up and turns," I need to identify the boy who is positioned to the left of the woman...
+                <span class="tag-label">&lt;/think&gt;</span>
+              </p>
+              <p><span class="tag-label">&lt;answer&gt;</span> Target ID: 3, Time range: 15.00 to 19.99 <span class="tag-label">&lt;/answer&gt;</span></p>
+            </div>
           </div>
-        
-          <!-- 左列：视频 -->
-          <div class="column is-6">
-            <figure class="image">
-              <video
-                id="demo"
-                controls
-                autoplay
-                muted
-                playsinline
-                preload="auto"
-                loop
-                style="width:100%;height:auto;">
-                <source src="assets/stvg_demo_v5.mp4?v=1" type="video/mp4" />
-              </video>
-            </figure>
-          </div>
-        
-          <!-- 右列：文字 -->
-          <div class="column is-6 has-text-left reasoning-block">
-            <p><strong>Description:</strong> The boy to the left of the woman stands up and turns.</p>
-        
-            <p><strong>Output:</strong></p>
-        
-            <p class="justified-output">
-              <span class="tag-label">&lt;think&gt;</span>
-              To determine the event "The boy to the left of the woman stands up and turns," I need to identify the boy who is positioned to the left of the woman. In this scene, the boy wearing a striped shirt is seated next to the woman. As the video progresses, this boy stands up and begins to turn his body away from the table. The action happens around the 15-second mark.
-              <span class="tag-label">&lt;/think&gt;</span>
-            </p>
-        
-            <p><span class="tag-label">&lt;answer&gt;</span> Target ID: 3, Time range: 15.00 to 19.99 <span class="tag-label">&lt;/answer&gt;</span></p>
-          </div>
-        
         </div>
+
 
 
 
