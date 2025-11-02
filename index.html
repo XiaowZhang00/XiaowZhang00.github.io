@@ -299,37 +299,36 @@
         <hr class="section-line">
     
 
-        <!-- <div class="content has-text-justified"> -->
-
-
         <!-- case 1 -->
         <div class="columns is-vcentered">
-        <p>
-          <strong style="color:red;">When and where?</strong><br>
-        <p>
-          <!-- video -->
+        
+          <!-- 标题：占满一行 -->
+          <div class="column is-12">
+            <p class="mb-3">
+              <strong class="has-text-danger">When and where?</strong>
+            </p>
+          </div>
+        
+          <!-- 左列：视频 -->
           <div class="column is-6">
             <figure class="image">
-                <video
-                  id="demo"
-                  controls          <!-- 有进度条 -->
-                  autoplay
-                  muted             <!-- 移动端自动播必须静音 -->
-                  playsinline
-                  preload="auto"    <!-- 比 metadata 更积极，拖动更顺畅 -->
-                  loop
-                  style="width:100%;height:auto;">
-                  <source src="assets/stvg_demo_v5.mp4?v=1" type="video/mp4" />
-                </video>
+              <video
+                id="demo"
+                controls
+                autoplay
+                muted
+                playsinline
+                preload="auto"
+                loop
+                style="width:100%;height:auto;">
+                <source src="assets/stvg_demo_v5.mp4?v=1" type="video/mp4" />
+              </video>
             </figure>
           </div>
-
         
-          <!-- text -->
+          <!-- 右列：文字 -->
           <div class="column is-6 has-text-left reasoning-block">
-            <p>
-              <strong>Description:</strong> The boy to the left of the woman stands up and turns. <br>
-            </p>
+            <p><strong>Description:</strong> The boy to the left of the woman stands up and turns.</p>
         
             <p><strong>Output:</strong></p>
         
@@ -343,6 +342,7 @@
           </div>
         
         </div>
+
 
 
         <!-- case 2 -->
