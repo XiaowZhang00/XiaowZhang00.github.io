@@ -304,16 +304,19 @@
 
         <!-- case 1 -->
         <div class="columns is-vcentered">
-        
+
+          <strong style="color:red;">When and where?</strong><br>
           <!-- video -->
           <div class="column is-6">
             <figure class="image">
                 <video
+                  id="demo"
+                  controls          <!-- 有进度条 -->
                   autoplay
-                  muted
-                  loop
+                  muted             <!-- 移动端自动播必须静音 -->
                   playsinline
-                  preload="metadata"
+                  preload="auto"    <!-- 比 metadata 更积极，拖动更顺畅 -->
+                  loop
                   style="width:100%;height:auto;">
                   <source src="assets/stvg_demo_v5.mp4?v=1" type="video/mp4" />
                 </video>
