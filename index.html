@@ -382,6 +382,76 @@
           </div>
         </div>
 
+        <!-- case 3 -->
+        <div class="mb-5">
+          <!-- 下面两列：左视频，右文字 -->
+          <div class="columns is-vcentered">
+            <!-- 左列：视频 -->
+            <div class="column is-6">
+              <figure class="image">
+                <video
+                  id="demo"
+                  controls
+                  autoplay
+                  muted
+                  playsinline
+                  preload="auto"
+                  loop
+                  style="width:100%;height:auto;">
+                  <source src="assets/stvg_demo4_v1.mp4" type="video/mp4" />
+                </video>
+              </figure>
+            </div>
+        
+            <!-- 右列：文字 -->
+            <div class="column is-6 has-text-left reasoning-block">
+              <p><strong>Description:</strong> The blue man walks a few steps forward as he speaks, and then sits down.</p>
+              <p><strong>Output:</strong></p>
+              <p class="justified-output">
+                <span class="tag-label">&lt;think&gt;</span>
+                To determine the event "The blue man walks a few steps forward as he speaks, and then sits down," I need to identify the blue man first. The blue man is wearing a blue robe and a black hat. In the video, the blue man (Object ID 4) starts by standing still and then begins to walk forward while speaking. After walking a few steps, he stops and sits down on the ground. This sequence happens between 10.00 and 16.99 seconds.
+                <span class="tag-label">&lt;/think&gt;</span>
+              </p>
+              <p><span class="tag-label">&lt;answer&gt;</span> Target ID: 4, Time range: 10.00 to 16.99 <span class="tag-label">&lt;/answer&gt;</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- case 4 -->
+        <div class="mb-5">
+          <!-- 下面两列：左视频，右文字 -->
+          <div class="columns is-vcentered">
+            <!-- 左列：视频 -->
+            <div class="column is-6">
+              <figure class="image">
+                <video
+                  id="demo"
+                  controls
+                  autoplay
+                  muted
+                  playsinline
+                  preload="auto"
+                  loop
+                  style="width:100%;height:auto;">
+                  <source src="assets/stvg_demo5_v1.mp4" type="video/mp4" />
+                </video>
+              </figure>
+            </div>
+        
+            <!-- 右列：文字 -->
+            <div class="column is-6 has-text-left reasoning-block">
+              <p><strong>Description:</strong> Man in military uniform walks to the stool and sits down</p>
+              <p><strong>Output:</strong></p>
+              <p class="justified-output">
+                <span class="tag-label">&lt;think&gt;</span>
+                The man in military uniform (Object ID 1) walks towards the stool and sits down. This action happens between 3.00 and 10.00 seconds.
+                <span class="tag-label">&lt;/think&gt;</span>
+              </p>
+              <p><span class="tag-label">&lt;answer&gt;</span> Target ID: 1, Time range: 3.00 to 12.00 <span class="tag-label">&lt;/answer&gt;</span></p>
+            </div>
+          </div>
+        </div>
+
         <!-- case 2 -->
         <div class="columns is-vcentered">
           
