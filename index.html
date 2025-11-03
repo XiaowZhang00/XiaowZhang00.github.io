@@ -302,7 +302,7 @@
         <div class="mb-5">
           <!-- 顶部一行标题 -->
           <p class="mb-3" style="text-align:left;">
-            <strong class="has-text-danger is-size-4">When and where?</strong>
+            <strong class="has-text-danger is-size-4">Spatial Temporal Video Grounding</strong>
           </p>
           <!-- 下面两列：左视频，右文字 -->
           <div class="columns is-vcentered">
@@ -459,6 +459,54 @@
           </div>
         </div>
 
+        <!-- case 1 -->
+        <div class="mb-5">
+          <!-- 顶部一行标题 -->
+          <p class="mb-3" style="text-align:left;">
+            <strong class="has-text-danger is-size-4">Multi-Object Referring Video Object Segmentation</strong>
+          </p>
+          <!-- 下面两列：左视频，右文字 -->
+          <div class="columns is-vcentered">
+            <!-- 左列：视频 -->
+            <div class="column is-6">
+              <figure class="image">
+                <video
+                  id="demo"
+                  controls
+                  autoplay
+                  muted
+                  playsinline
+                  preload="auto"
+                  loop
+                  style="width:100%;height:auto;">
+                  <source src="assets/stvg_demo3_v1.mp4" type="video/mp4" />
+                </video>
+              </figure>
+            </div>
+        
+            <!-- 右列：文字 -->
+            <div class="column is-6 has-text-left reasoning-block">
+              <p><strong>Description:</strong>The woman in yellow clothes puts her phone down, stands up, and turns around and walks in front of the man in white.</p>
+              <p><strong>Output:</strong>
+              <p class="justified-output">
+                <span class="tag-label">&lt;think&gt;</span>
+                To determine the event "The woman in yellow clothes puts her phone down, stands up, and turns around and walks in front of the man in white," I need to analyze the sequence of actions: <br>
+                1. The woman in yellow clothes (Object ID 1) is initially seated and appears to be holding a phone. 
+                2. She then puts the phone down on the desk. 
+                3. She stands up from her seat. 
+                4. She turns around and walks in front of the man in white (Object ID 2). <br>
+                Based on this sequence, the event likely occurs between the moment she puts the phone down and the moment she starts walking in front of the man in white. <br>
+                Temporal Analysis:
+                - The woman puts her phone down around 0.50 seconds.
+                - She stands up around 1.00 seconds.
+                - She turns around and walks in front of the man in white around 3.50 seconds. <br>
+                Therefore, the event occurs between 1.00 and 5.00 seconds.
+                <span class="tag-label">&lt;/think&gt;</span>
+              </p>
+              <p><span class="tag-label">&lt;answer&gt;</span> Target ID: 1, Time range: 1.00 to 5.00 <span class="tag-label">&lt;/answer&gt;</span></p>
+            </div>
+          </div>
+        </div>
 
         <!-- case 3 -->
         <div class="columns is-vcentered">
