@@ -228,7 +228,7 @@
                   <p><strong>2. Reinforcement Learning with Structured Rewards.</strong> We optimize the policy with a task-driven reward that combines temporal accuracy, spatial consistency, and format regularization.</p>
                     <!-- 新增：奖励项详细说明（支持 MathJax） -->
                     <div class="content has-text-justified hover-card" style="padding: 1rem 1.25rem;">
-                       <p><em>Temporal IoU reward.</em> It quantifies the overlap between the predicted interval \([t_s,t_e]\) and the ground-truth segment \([t'_s,t'_e]\):</p>
+                       <p><strong em>Temporal IoU reward.</strong /em> It quantifies the overlap between the predicted interval \([t_s,t_e]\) and the ground-truth segment \([t'_s,t'_e]\):</p>
 
                         \[
                         r_{t}(o) = 
@@ -237,7 +237,7 @@
                         
                         <p>Here, \(A \cap B\) and \(A \cup B\) denote the intersection and union (by length) of intervals \(A\) and \(B\), respectively.</p>
                         
-                      <p><em>Spatial consistency reward.</em> It verifies whether the predicted object ID is correct and appears within the localized temporal segment:</p>
+                      <p><strong em>Spatial consistency reward.</strong /em> It verifies whether the predicted object ID is correct and appears within the localized temporal segment:</p>
                     
                       \[
                       r_{s}(o) =
@@ -250,9 +250,9 @@
                       <p>Here, \(\imath\) and \(\imath^{*}\) denote the predicted and ground-truth object ID. This design is consistent with the vIoU metric in STVG, defined as
                       \(\lvert P_u\rvert^{-1}\!\sum_{t\in P_i}\operatorname{IoU}(b_t, b_t^{*})\), where \(P_i\) and \(P_u\) are the intersection and union of the predicted and ground-truth temporal segments, and \(b_t\) and \(b_t^{*}\) are the predicted and ground-truth bounding boxes at frame \(t\). </p>
                     
-                      <p><em>Format reward \(r_f(o)\).</em> This term enforces compliance with the predefined reasoning structure, encouraging the model to explicitly generate its reasoning process. A value of 1 is assigned only if the response encloses the reasoning within <code>&lt;think&gt;...&lt;/think&gt;</code> and the final prediction within <code>&lt;answer&gt;...&lt;/answer&gt;</code>. Reasoning traces with timestamps and instance IDs provide clearer references and more precise grounding.</p>
+                      <p><strong em>Format reward \(r_f(o)\).</strong /em> This term enforces compliance with the predefined reasoning structure, encouraging the model to explicitly generate its reasoning process. A value of 1 is assigned only if the response encloses the reasoning within <code>&lt;think&gt;...&lt;/think&gt;</code> and the final prediction within <code>&lt;answer&gt;...&lt;/answer&gt;</code>. Reasoning traces with timestamps and instance IDs provide clearer references and more precise grounding.</p>
                     
-                      <p><em>Overall reward.</em> The full objective is the sum of the three components:</p>
+                      <p><strong em>Overall reward.</strong /em> The full objective is the sum of the three components:</p>
                     
                       \[
                       R(o) = r_{t}(o) + r_{s}(o) + r_{f}(o).
