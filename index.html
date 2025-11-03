@@ -235,7 +235,7 @@
                         \frac{[t_s, t_e] \cap [t'_s, t'_e]}{[t_s, t_e] \cup [t'_s, t'_e]}.
                         \]
                         
-                        <p>Here, \(A \cap B\) and \(A \cup B\) denote the intersection and union (by length) of intervals \(A\) and \(B\), respectively.</p>
+                        <p>Here, \(A \cap B\) and \(A \cup B\) denote the intersection and union of intervals \(A\) and \(B\), respectively.</p>
                         
                       <p><strong em>Spatial consistency reward.</strong /em> It verifies whether the predicted object ID is correct and appears within the localized temporal segment:</p>
                     
@@ -250,7 +250,7 @@
                       <p>Here, \(\imath\) and \(\imath^{*}\) denote the predicted and ground-truth object ID. This design is consistent with the vIoU metric in STVG, defined as
                       \(\lvert P_u\rvert^{-1}\!\sum_{t\in P_i}\operatorname{IoU}(b_t, b_t^{*})\), where \(P_i\) and \(P_u\) are the intersection and union of the predicted and ground-truth temporal segments, and \(b_t\) and \(b_t^{*}\) are the predicted and ground-truth bounding boxes at frame \(t\). </p>
                     
-                      <p><strong em>Format reward \(r_f(o)\).</strong /em> This term enforces compliance with the predefined reasoning structure, encouraging the model to explicitly generate its reasoning process. A value of 1 is assigned only if the response encloses the reasoning within <code>&lt;think&gt;...&lt;/think&gt;</code> and the final prediction within <code>&lt;answer&gt;...&lt;/answer&gt;</code>. Reasoning traces with timestamps and instance IDs provide clearer references and more precise grounding.</p>
+                      <p><strong em>Format reward \(r_f(o)\).</strong /em> A value of 1 is assigned only if the response encloses the reasoning within <code>&lt;think&gt;...&lt;/think&gt;</code> and the final prediction within <code>&lt;answer&gt;...&lt;/answer&gt;</code>. Reasoning traces with timestamps and instance IDs provide clearer references and more precise grounding.</p>
                     
                       <p><strong em>Overall reward.</strong /em> The full objective is the sum of the three components:</p>
                     
