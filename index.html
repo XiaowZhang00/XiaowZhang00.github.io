@@ -225,10 +225,16 @@
                 <div class="content has-text-justified hover-card" style="padding: 1.5rem;">
                   An illustration of our proposed <strong>STVG-R1</strong> framework. Each object is assigned a unique ID via visual prompts, and the policy model is trained with spatial, temporal, and template rewards.</p>
                   <p><strong>1. Object-Centric Visual Prompting.</strong> Each object in the video is assigned a unique, temporally consistent ID rendered as a small visual marker. These IDs transform dense coordinate prediction into a compact instance-level identification task, mitigating visual–textual misalignment and enabling interpretable grounding. 
-                  <p><strong>2. Reinforcement Learning with Structured Rewards.</strong> The model is optimized under a task-driven reward combining temporal accuracy, spatial consistency, and format regularity. This unified framework enhances reasoning coherence and yields state-of-the-art performance across six video grounding benchmarks. 
                   <p><strong>2. Reinforcement Learning with Structured Rewards.</strong> We optimize the policy with a task-driven reward that combines temporal accuracy, spatial consistency, and format regularization.</p>
                     <!-- 新增：奖励项详细说明（支持 MathJax） -->
                     <div class="content has-text-justified hover-card" style="padding: 1rem 1.25rem;">
+                       <p><em>Temporal IoU reward.</em> It quantifies the overlap between the predicted interval $[t_s,t_e]$ and the ground-truth segment $[t'_s,t'_e]$:</p>
+                        
+                        \begin{align}
+                        r_{t}(o) = \frac{[t_s, t_e] \cap [t'_s, t'_e]}{[t_s, t_e] \cup [t'_s, t'_e]},
+                        \end{align}
+                        where $A \cap B$ and $A \cup B$ denote the intersection and union of intervals $A$ and $B$, respectively.
+                        
                       <p><em>Spatial consistency reward.</em> It verifies whether the predicted object ID is correct and appears within the localized temporal segment:</p>
                     
                       \[
@@ -240,7 +246,7 @@
                       \]
                     
                       <p>Here, \(\imath\) and \(\imath^{*}\) denote the predicted and ground-truth object ID. This design is consistent with the vIoU metric in STVG, defined as
-                      \(\lvert P_u\rvert^{-1}\!\sum_{t\in P_i}\operatorname{IoU}(b_t, b_t^{*})\), where \(P_i\) and \(P_u\) are the intersection and union of the predicted and ground-truth temporal segments, and \(b_t\) and \(b_t^{*}\) are the predicted and ground-truth bounding boxes at frame \(t\). Since vIoU jointly evaluates temporal and spatial accuracy, constraining the predicted ID to fall within the localized segment prevents trivial solutions and mitigates overfitting to dataset-specific temporal patterns, improving optimization stability.</p>
+                      \(\lvert P_u\rvert^{-1}\!\sum_{t\in P_i}\operatorname{IoU}(b_t, b_t^{*})\), where \(P_i\) and \(P_u\) are the intersection and union of the predicted and ground-truth temporal segments, and \(b_t\) and \(b_t^{*}\) are the predicted and ground-truth bounding boxes at frame \(t\). </p>
                     
                       <p><em>Format reward \(r_f(o)\).</em> This term enforces compliance with the predefined reasoning structure, encouraging the model to explicitly generate its reasoning process. A value of 1 is assigned only if the response encloses the reasoning within <code>&lt;think&gt;...&lt;/think&gt;</code> and the final prediction within <code>&lt;answer&gt;...&lt;/answer&gt;</code>. Reasoning traces with timestamps and instance IDs provide clearer references and more precise grounding.</p>
                     
