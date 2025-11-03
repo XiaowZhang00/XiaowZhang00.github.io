@@ -228,12 +228,20 @@
                   <p><strong>2. Reinforcement Learning with Structured Rewards.</strong> We optimize the policy with a task-driven reward that combines temporal accuracy, spatial consistency, and format regularization.</p>
                     <!-- 新增：奖励项详细说明（支持 MathJax） -->
                     <div class="content has-text-justified hover-card" style="padding: 1rem 1.25rem;">
-                       <p><em>Temporal IoU reward.</em> It quantifies the overlap between the predicted interval $[t_s,t_e]$ and the ground-truth segment $[t'_s,t'_e]$:</p>
+                       <p><em>Temporal IoU reward.</em> It quantifies the overlap between the predicted interval \([t_s,t_e]\) and the ground-truth segment \([t'_s,t'_e]\):</p>
+
+                        \[
+                        r_{t}(o) = 
+                        \frac{[t_s, t_e] \cap [t'_s, t'_e]}{[t_s, t_e] \cup [t'_s, t'_e]}.
+                        \]
                         
-                        \begin{align}
-                        r_{t}(o) = \frac{[t_s, t_e] \cap [t'_s, t'_e]}{[t_s, t_e] \cup [t'_s, t'_e]},
-                        \end{align}
-                        where $A \cap B$ and $A \cup B$ denote the intersection and union of intervals $A$ and $B$, respectively.
+                        <p>Here, \(A \cap B\) and \(A \cup B\) denote the intersection and union (by length) of intervals \(A\) and \(B\), respectively. Equivalently,</p>
+                        
+                        \[
+                        r_{t}(o) =
+                        \frac{\max\!\bigl(0,\, \min(t_e,t'_e)-\max(t_s,t'_s)\bigr)}
+                        {\max(t_e,t'_e)-\min(t_s,t'_s)}.
+                        \]
                         
                       <p><em>Spatial consistency reward.</em> It verifies whether the predicted object ID is correct and appears within the localized temporal segment:</p>
                     
