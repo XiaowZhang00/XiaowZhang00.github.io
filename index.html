@@ -479,35 +479,130 @@
                   preload="auto"
                   loop
                   style="width:100%;height:auto;">
-                  <source src="assets/stvg_demo3_v1.mp4" type="video/mp4" />
+                  <source src="assets/rvos_demo1.mp4" type="video/mp4" />
                 </video>
               </figure>
             </div>
         
             <!-- 右列：文字 -->
             <div class="column is-6 has-text-left reasoning-block">
-              <p><strong>Description:</strong>The woman in yellow clothes puts her phone down, stands up, and turns around and walks in front of the man in white.</p>
+              <p><strong>Description:</strong>Except for the two bears in front, all other bears in the distance walking.</p>
               <p><strong>Output:</strong>
               <p class="justified-output">
                 <span class="tag-label">&lt;think&gt;</span>
-                To determine the event "The woman in yellow clothes puts her phone down, stands up, and turns around and walks in front of the man in white," I need to analyze the sequence of actions: <br>
-                1. The woman in yellow clothes (Object ID 1) is initially seated and appears to be holding a phone. 
-                2. She then puts the phone down on the desk. 
-                3. She stands up from her seat. 
-                4. She turns around and walks in front of the man in white (Object ID 2). <br>
-                Based on this sequence, the event likely occurs between the moment she puts the phone down and the moment she starts walking in front of the man in white. <br>
-                Temporal Analysis:
-                - The woman puts her phone down around 0.50 seconds.
-                - She stands up around 1.00 seconds.
-                - She turns around and walks in front of the man in white around 3.50 seconds. <br>
-                Therefore, the event occurs between 1.00 and 5.00 seconds.
+                To identify the event 'Except for the two bears in front, all other bears in the distance walking', I need to focus on the bears that are further away from the camera. In this sequence, there are five bears visible, and they appear to be moving across the grassy field. The two bears in the foreground are labeled as 2 and 4, while the others are labeled as 1, 3, and 5. The bears labeled as 1, 3, and 5 are positioned further back in the scene and seem to be walking away from the camera.
                 <span class="tag-label">&lt;/think&gt;</span>
               </p>
-              <p><span class="tag-label">&lt;answer&gt;</span> Target ID: 1, Time range: 1.00 to 5.00 <span class="tag-label">&lt;/answer&gt;</span></p>
+              <p><span class="tag-label">&lt;answer&gt;</span> Target ID: 1, 3, 5 <span class="tag-label">&lt;/answer&gt;</span></p>
+            </div>
+          </div>
+        </div>
+          
+        <!-- case 2 -->
+        <div class="mb-5">
+          <!-- 下面两列：左视频，右文字 -->
+          <div class="columns is-vcentered">
+            <!-- 左列：视频 -->
+            <div class="column is-6">
+              <figure class="image">
+                <video
+                  id="demo"
+                  controls
+                  autoplay
+                  muted
+                  playsinline
+                  preload="auto"
+                  loop
+                  style="width:100%;height:auto;">
+                  <source src="assets/rvos_demo4.mp4" type="video/mp4" />
+                </video>
+              </figure>
+            </div>
+        
+            <!-- 右列：文字 -->
+            <div class="column is-6 has-text-left reasoning-block">
+              <p><strong>Description:</strong>two moving cats</p>
+              <p><strong>Output:</strong>
+              <p class="justified-output">
+                <span class="tag-label">&lt;think&gt;</span>
+                To identify the event 'two moving cats', I need to analyze the movement of the cats in the video. The cats labeled as 2 and 3 appear to be the ones that are moving. Cat 2 is standing up and seems to be walking away from the camera, while cat 3 is also moving but it's not as clear if it's walking or just shifting position. Cat 1 remains stationary throughout the video.
+                <span class="tag-label">&lt;/think&gt;</span>
+              </p>
+              <p><span class="tag-label">&lt;answer&gt;</span> Target ID: 1, 3, 5 <span class="tag-label">&lt;/answer&gt;</span></p>
             </div>
           </div>
         </div>
 
+        <!-- case 3 -->
+        <div class="mb-5">
+          <!-- 下面两列：左视频，右文字 -->
+          <div class="columns is-vcentered">
+            <!-- 左列：视频 -->
+            <div class="column is-6">
+              <figure class="image">
+                <video
+                  id="demo"
+                  controls
+                  autoplay
+                  muted
+                  playsinline
+                  preload="auto"
+                  loop
+                  style="width:100%;height:auto;">
+                  <source src="assets/rvos_demo3.mp4" type="video/mp4" />
+                </video>
+              </figure>
+            </div>
+        
+            <!-- 右列：文字 -->
+            <div class="column is-6 has-text-left reasoning-block">
+              <p><strong>Description:</strong>front elephant walking to backwards</p>
+              <p><strong>Output:</strong>
+              <p class="justified-output">
+                <span class="tag-label">&lt;think&gt;</span>
+                To determine the event 'front elephant walking to backwards', I need to observe the movement of the elephants. In the video, the front elephant (ID 1) starts facing forward and then turns around to walk backward. This transition happens gradually over a few seconds.
+                <span class="tag-label">&lt;/think&gt;</span>
+              </p>
+              <p><span class="tag-label">&lt;answer&gt;</span> Target ID: 1, 3, 5 <span class="tag-label">&lt;/answer&gt;</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- case 4 -->
+        <div class="mb-5">
+          <!-- 下面两列：左视频，右文字 -->
+          <div class="columns is-vcentered">
+            <!-- 左列：视频 -->
+            <div class="column is-6">
+              <figure class="image">
+                <video
+                  id="demo"
+                  controls
+                  autoplay
+                  muted
+                  playsinline
+                  preload="auto"
+                  loop
+                  style="width:100%;height:auto;">
+                  <source src="assets/rvos_demo5.mp4" type="video/mp4" />
+                </video>
+              </figure>
+            </div>
+        
+            <!-- 右列：文字 -->
+            <div class="column is-6 has-text-left reasoning-block">
+              <p><strong>Description:</strong>Dogs moving around</p>
+              <p><strong>Output:</strong>
+              <p class="justified-output">
+                <span class="tag-label">&lt;think&gt;</span>
+                The event 'Dogs moving around' seems to occur throughout the video, as the dogs are continuously interacting with each other. The black dog (ID 1) and the white dog (ID 3) are seen moving around and playing with each other. The yellow bag (ID 2) remains stationary, and the other objects (ID 4 and ID 5) do not seem to be involved in the movement.
+                <span class="tag-label">&lt;/think&gt;</span>
+              </p>
+              <p><span class="tag-label">&lt;answer&gt;</span> Target ID: 1, 3, 5 <span class="tag-label">&lt;/answer&gt;</span></p>
+            </div>
+          </div>
+        </div>
+          
         <!-- case 3 -->
         <div class="columns is-vcentered">
           
